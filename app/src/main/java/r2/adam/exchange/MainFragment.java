@@ -28,7 +28,7 @@ public class MainFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ExchangeAdapter exchangeAdapter = new ExchangeAdapter();
-        MainActivityVM viewModel = ViewModelProviders.of(this).get(MainActivityVM.class);
+        SocketVM viewModel = ViewModelProviders.of(this).get(SocketVM.class);
         viewModel.exchangeLiveData.observe(getViewLifecycleOwner(), exchanges -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 exchanges.sort((o1, o2) -> (int) (o2.getNewPrice() - o1.getNewPrice()));
