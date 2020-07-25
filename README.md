@@ -1,6 +1,4 @@
-# Exchange
-
-Example SocketIO with MVVM
+# Example SocketIO with MVVM
 
 ```java
 public class SocketVM extends ViewModel {
